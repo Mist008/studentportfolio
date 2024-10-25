@@ -1,94 +1,144 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#education">Educational Background</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#awards">Awards</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#research">Research Thrust Area</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#presentations">Presentations</a></li>
-                <li><a href="#courses">Courses Completed</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Welcome to my portfolio! I am Deboriddha Dutta, a dedicated student of UEM Kolkata with a passion for learning and research.</p>
-        </section>
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #eaeaea, #f3f4f6);
+}
 
-        <section id="education">
-            <h2>Educational Background</h2>
-            <p>I'm currently studying in UEM kolkata 1st year btech in CSE core</p>
-        </section>
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
 
-        <section id="experience">
-            <h2>Experience</h2>
-            <p>Have experience in web dev and website designing</p>
-        </section>
+header {
+    background: linear-gradient(135deg, #4a90e2, #5c6bc0);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
 
-        <section id="publications">
-            <h2>Paper/Patent Publications</h2>
-            <p>NA</p>
-        </section>
+nav ul {
+    list-style: none;
+    padding: 0;
+}
 
-        <section id="awards">
-            <h2>Awards and Achievements</h2>
-            <p>NA.</p>
-        </section>
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>NA</p>
-        </section>
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
 
-        <section id="research">
-            <h2>Research Thrust Area</h2>
-            <p>NA</p>
-        </section>
+nav ul li a:hover {
+    color: #ffcc00; /* Example hover color */
+}
 
-        <section id="events">
-            <h2>List of Events</h2>
-            <p>plenty web dev events</p>
-        </section>
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
 
-        <section id="presentations">
-            <h2>Poster/Paper Presentation</h2>
-            <p>made a physics poster about super conductors</p>
-        </section>
+main {
+    padding: 20px;
+}
 
-        <section id="courses">
-            <h2>Courses Completed</h2>
-            <p>List of courses completed NPTEL</p>
-        </section>
+section {
+    background: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>You can reach me at: <a href="mailto:deboriddhadutta@gmail.com">deboriddhadutta@gmail.com</a></p>
-            <form action="#" method="post">
-                <label for="name">Name: Deboriddha Dutta</label>
-            </form>
-        </section>
-    </main>
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
 
-    <footer>
-        <p>&copy; 2023 Deboriddha Dutta. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+h2 {
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #4a90e2;
+}
+
+button {
+    padding: 10px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5c6bc0; /* Darker shade on hover */
+}
+
+/* Image styles */
+section img {
+    width: 100%; /* Full width for responsiveness */
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: transform 0.3s;
+}
+
+section img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Stack vertically */
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 15px; /* Adjust padding */
+    }
+
+    h1 {
+        font-size: 2em; /* Adjust for smaller screens */
+    }
+}
